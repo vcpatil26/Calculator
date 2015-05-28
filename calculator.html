@@ -10,13 +10,6 @@
 	   
 	   <link id="light" rel="stylesheet" type="text/css" href="calculator-light.css" />
 	   
-	   <script type="text/javascript">
-					function toggle() {
-			  var a = document.getElementById("light");
-			  a.x = 'calculator-dark' == a.x ? 'calculator-light' : 'calculator-dark'; // short if
-			  a.href = a.x + '.css';
-			}
-		</script>
 	   
 	 </head>
 	   
@@ -54,6 +47,14 @@
 
 
 		<script src="calculator.js"></script>
+		<script type="text/javascript">
+				//Toggle() to enable the switching of the links	
+					function toggle() {
+			  var a = document.getElementById("light");
+			  a.x = 'calculator-dark' == a.x ? 'calculator-light' : 'calculator-dark'; // short if
+			  a.href = a.x + '.css';
+			}
+		</script>
 		
 	 </body>
 </html>

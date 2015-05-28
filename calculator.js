@@ -3,10 +3,10 @@ var keys = document.querySelectorAll('#calculator span');
 var operators = ['+', '-', '*', '/'];
 var decimalAdded = false;
 var assessment= false;
-var exp = '';;
+var exp = '';
 
 // Adding onclick events to the keys and defining their operations
-for(var i = 0; i < keys.length; i++) {
+for(var i = 1; i < keys.length; i++) {
 	keys[i].onclick = function(e) {
 		// Get the input and button values
 		var input = document.querySelector('.screen');
@@ -16,8 +16,8 @@ for(var i = 0; i < keys.length; i++) {
 		
 		// Execution of the clear key will erase everything
 		if(btnVal == 'C') {
-			input.innerHTML = '0';
-			exp = '0';
+			input.innerHTML = '';
+			exp = '';
 			decimalAdded = false;
 		}
 		
@@ -33,6 +33,8 @@ for(var i = 0; i < keys.length; i++) {
 			else{
 			var number='';
 			var i=inputVal.length-1;
+			
+			//Separate calculation for inner.HTML 
 			for(; i>=0; i--){
 				if(operators.indexOf(inputVal.charAt(i)) > -1){
 					break;											//parses the string till the right-most operator to find the number whose square root is requested
@@ -43,6 +45,8 @@ for(var i = 0; i < keys.length; i++) {
 			input.innerHTML = inputVal.substring(0,i+1)+"sqrt(" +number +")";		//Displays the expression before eval key is hit
 			number='';
 			i=exp.length-1;
+			
+			//Separate calculation for exp
 			for(; i>=0; i--){
 				if(operators.indexOf(exp.charAt(i)) > -1){
 					break;
@@ -50,7 +54,7 @@ for(var i = 0; i < keys.length; i++) {
 				number=exp.charAt(i) + number;
 				
 			}
-			exp = exp.substring(0, i+1) + Math.sqrt(number);
+			exp = exp.substring(0, i+1) + Math.sqrt(number);		//evaluates the expression using the Math.sqrt() and passes it to eval
 			}
 		}
 		
