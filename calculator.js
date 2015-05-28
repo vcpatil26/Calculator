@@ -23,7 +23,35 @@ for(var i = 0; i < keys.length; i++) {
 		
 		//Additional functionality to calculate the square root
 		else if(btnVal == 'sqrt'){
+			var equation = inputVal;
+			var lastChar = equation[equation.length - 1];
 			
+			//Generates syntax error for square root of empty input and square root of operator
+			if(operators.indexOf(lastChar) > -1  || inputVal == ''){
+			alert("Syntax error");
+			}
+			else{
+			var number='';
+			var i=inputVal.length-1;
+			for(; i>=0; i--){
+				if(operators.indexOf(inputVal.charAt(i)) > -1){
+					break;											//parses the string till the right-most operator to find the number whose square root is requested
+				}
+				number=inputVal.charAt(i) + number;
+				
+			}
+			input.innerHTML = inputVal.substring(0,i+1)+"sqrt(" +number +")";		//Displays the expression before eval key is hit
+			number='';
+			i=exp.length-1;
+			for(; i>=0; i--){
+				if(operators.indexOf(exp.charAt(i)) > -1){
+					break;
+				}
+				number=exp.charAt(i) + number;
+				
+			}
+			exp = exp.substring(0, i+1) + Math.sqrt(number);
+			}
 		}
 		
 		// If eval key is pressed, calculate and display the result
