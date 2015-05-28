@@ -5,13 +5,6 @@ var decimalAdded = false;
 var assessment= false;
 var exp = '';;
 
-/*function toggle() {
-  var a = document.getElementById("light");
-  a.x = 'calculator-dark' == a.x ? 'calculator-light' : 'claculator-dark'; // short if
-  a.href = a.x + '.css';
-}*/
-
-
 // Adding onclick events to the keys and defining their operations
 for(var i = 0; i < keys.length; i++) {
 	keys[i].onclick = function(e) {
@@ -20,17 +13,9 @@ for(var i = 0; i < keys.length; i++) {
 		var inputVal = input.innerHTML;
 		var btnVal = this.innerHTML;		//Appends the key values to the input string
 		
-		/*if(btnVal == 'T') {
-				  var a = document.getElementById("light");
-				  a.x = 'calculator-dark' == a.x ? 'calculator-light' : 'claculator-dark'; // short if
-				  a.href = a.x + '.css';
-				
-		}*/
 		
-		 
-	
 		// Execution of the clear key will erase everything
-		else if(btnVal == 'C') {
+		if(btnVal == 'C') {
 			input.innerHTML = '0';
 			exp = '0';
 			decimalAdded = false;
