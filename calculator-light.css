@@ -136,27 +136,33 @@ html {
 }
 
 /* Some hover effects */
+.top span.theme:hover{
+	background: #276C8A;
+	box-shadow: 0px 4px #1D4557;
+	color: white;
+}
+
 .keys span:hover {
-	background: #9c89f6;
-	box-shadow: 0px 4px #6b54d3;
+	background: #276C8A;
+	box-shadow: 0px 4px #1D4557;
 	color: white;
 }
 
 .keys span.eval:hover {
-	background: #abb850;
-	box-shadow: 0px 4px #717a33;
+	background: #2C8F3A;
+	box-shadow: 0px 4px #1D5926;
 	color: #ffffff;
 }
 
-.top span.clear:hover {
-	background: #f68991;
-	box-shadow: 0px 4px #d3545d;
+.keys span.clear:hover {
+	background: #276C8A;
+	box-shadow: 0px 4px #1D4557;
 	color: white;
 }
 
 /* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
 .keys span:active {
-	box-shadow: 0px 0px #6b54d3;
+	box-shadow: 0px 0px #B1A5E8;
 	top: 4px;
 }
 
@@ -165,7 +171,7 @@ html {
 	top: 4px;
 }
 
-.top span.clear:active {
+.keys span.clear:active {
 	top: 4px;
-	box-shadow: 0px 0px #d3545d;
+	box-shadow: 0px 0px #C0E0ED;
 }
