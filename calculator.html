@@ -10,13 +10,21 @@
 	   
 	   <link id="light" rel="stylesheet" type="text/css" href="calculator-light.css" />
 	   
+	   <script type="text/javascript">
+					function toggle() {
+			  var a = document.getElementById("light");
+			  a.x = 'calculator-dark' == a.x ? 'calculator-light' : 'calculator-dark'; // short if
+			  a.href = a.x + '.css';
+			}
+		</script>
+	   
 	 </head>
 	   
 	 <body>  
 	   <div id="calculator">
 	<!-- Screen and Theme key -->
 			<div class="top">
-				<span class="theme">T</span>
+				<span class="theme" onclick= "toggle()">T</span>
 				<div class="screen"></div>
 			</div>
 			
@@ -46,5 +54,6 @@
 
 
 		<script src="calculator.js"></script>
+		
 	 </body>
 </html>
