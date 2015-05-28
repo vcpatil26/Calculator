@@ -126,19 +126,25 @@ html {
 }
 
 .keys span.eval {
-	background: #74A388;
-	box-shadow: 0px 4px #4D522E;
+	background: #37573D;
+	box-shadow: 0px 4px #29402D;
 	color: #686E44;
 	width: 138px;
 }
 
 .keys span.clear {
-	background: #B33232;
-	box-shadow: 0px 4px #911F1F;
+	background: #3D3757;
+	box-shadow: 0px 4px #272436;
 	color: white;
 }
 
 /* Some hover effects */
+
+.top span.theme:hover{
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	color: white;
+}
 .keys span:hover {
 	background: #9c89f6;
 	box-shadow: 0px 4px #6b54d3;
@@ -146,14 +152,14 @@ html {
 }
 
 .keys span.eval:hover {
-	background: #abb850;
-	box-shadow: 0px 4px #717a33;
+	background: #74BF6D;
+	box-shadow: 0px 4px #5E8A5A;
 	color: #ffffff;
 }
 
 .keys span.clear:hover {
-	background: #f88991;
-	box-shadow: 0px 4px #d3545d;
+	background: #6F6987;
+	box-shadow: 0px 4px #4D495C;
 	color: white;
 }
 
